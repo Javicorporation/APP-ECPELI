@@ -48,8 +48,8 @@ public class Pelicula {
     @ManyToMany(fetch = FetchType.LAZY)
     // Define la tabla de unión que conecta Pelicula con Genero
     @JoinTable(name = "generoPelicula",
-                    joinColumns = @JoinColumn(name ="idPelicula"),
-                    inverseJoinColumns = @JoinColumn(name = "IdGenero"))
+            joinColumns = @JoinColumn(name = "idPelicula"),
+            inverseJoinColumns = @JoinColumn(name = "IdGenero"))
     private List<Genero> generos;
 
     //  Indica que este campo no será persistido en la base de datos.
